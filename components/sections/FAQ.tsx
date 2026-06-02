@@ -13,11 +13,11 @@ export default function FAQ() {
   const dict = useDictionary();
   const { title, items } = dict.faq;
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight"
+            className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,11 +35,11 @@ export default function FAQ() {
         >
           <Accordion type="single" collapsible className="w-full space-y-4">
             {items.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-white border border-gray-100 rounded-xl px-6 data-[state=open]:shadow-md transition-shadow">
-                <AccordionTrigger className="text-start font-semibold text-gray-900 hover:no-underline hover:text-primary py-5">
+              <AccordionItem key={index} value={`item-${index}`} className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-xl px-6 data-[state=open]:shadow-md transition-shadow">
+                <AccordionTrigger className="text-start font-semibold text-gray-900 dark:text-gray-100 hover:no-underline hover:text-primary py-5">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-5 leading-relaxed">
+                <AccordionContent className="text-gray-600 dark:text-gray-300 pb-5 leading-relaxed">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

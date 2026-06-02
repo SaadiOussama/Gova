@@ -2,6 +2,7 @@
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import Script from "next/script";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,9 +28,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const dir = lang === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={lang} dir={dir} className={inter.variable}>
-      <body className="antialiased font-sans bg-white text-gova-dark" suppressHydrationWarning>
-        {children}
+    <html lang={lang} dir={dir} className={inter.variable} suppressHydrationWarning>
+      <body className="antialiased font-sans bg-white dark:bg-gray-900 text-gova-dark dark:text-gray-100" suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         {GA_ID && (
           <>
             <Script

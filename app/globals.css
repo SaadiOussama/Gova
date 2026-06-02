@@ -1,13 +1,14 @@
 @import "tailwindcss";
+@custom-variant dark (&:is(.dark, .dark *));
 
 @theme {
-  --color-primary: #1a73e8;
+  --color-primary: #eab84c;
   --color-primary-foreground: #ffffff;
   --color-muted: hsl(210 40% 96.1%);
   --color-muted-foreground: hsl(220 8.9% 46.1%);
   --color-border: hsl(214.3 31.8% 91.4%);
   --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: #1a73e8;
+  --color-ring: #eab84c;
   --color-background: #ffffff;
   --color-foreground: hsl(221 39% 11%);
   --color-card: #ffffff;
@@ -16,7 +17,7 @@
   --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-accent: hsl(38 93% 53%);
-  --color-gova-blue: #1a73e8;
+  --color-gova-blue: #eab84c;
   --color-gova-amber: #f59e0b;
   --color-gova-green: #10b981;
   --color-gova-dark: #111827;
@@ -44,6 +45,11 @@
     color: #111827;
     background-color: #ffffff;
     line-height: 1.5;
+  }
+
+  .dark body {
+    color: #f9fafb;
+    background-color: #111827;
   }
 
   :focus-visible {

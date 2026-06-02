@@ -127,9 +127,10 @@ const en: Dictionary = {
     title: "Cities we serve",
     subtitle: "GOVA is currently available in Algeria's main cities.",
     available: "Available",
-    comingSoon: "Coming soon",
-    notifyLabel: "Notify me",
-    notifyPlaceholder: "Your email...",
+    comingSoon: "Your city is coming soon",
+    notifyLabel: "Be the first to know when GOVA launches in your city",
+    notifyButton: "Notify me",
+    notifyPlaceholder: "Enter your email...",
     cities: ["Algiers", "Oran", "Constantine", "Annaba", "Sétif"],
   },
 

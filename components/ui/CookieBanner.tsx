@@ -65,7 +65,7 @@ export default function CookieBanner() {
           aria-live="polite"
           aria-label="Cookie consent"
         >
-          <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <p className="text-sm text-gova-gray flex-1">
               {message}{" "}
               <Link
@@ -78,13 +78,13 @@ export default function CookieBanner() {
             <div className="flex gap-2 shrink-0">
               <button
                 onClick={handleDecline}
-                className="px-4 py-2 rounded-xl text-sm font-semibold border border-gray-200 text-gova-gray hover:bg-gray-50 transition-colors"
+                className="px-4 py-2 rounded-xl text-sm font-semibold border border-gray-200 dark:border-gray-600 text-gova-gray hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 {decline}
               </button>
               <button
                 onClick={handleAccept}
-                className="px-4 py-2 rounded-xl text-sm font-semibold bg-gova-blue text-white hover:bg-blue-700 transition-colors"
+                className="px-4 py-2 rounded-xl text-sm font-semibold bg-[#EAB84C] text-white hover:bg-[#D97706] transition-colors"
               >
                 {accept}
               </button>

@@ -32,6 +32,7 @@ export default async function LangLayout({ children, params }: Props) {
   }
 
   const dict = await getDictionary(lang);
+  const dir = lang === "ar" ? "rtl" : "ltr";
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -83,6 +84,7 @@ export default async function LangLayout({ children, params }: Props) {
 
   return (
     <DictProvider dict={dict}>
+      <div dir={dir} lang={lang}>
       <JsonLd data={organizationSchema} />
       <JsonLd data={appSchema} />
       <JsonLd data={faqSchema} />
@@ -96,6 +98,7 @@ export default async function LangLayout({ children, params }: Props) {
       <main id="main-content">{children}</main>
       <Footer />
       <CookieBanner />
+      </div>
     </DictProvider>
   );
 }

@@ -27,14 +27,6 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-semibold mb-4 text-lg">{columns.passengers.title}</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              {columns.passengers.links.map((link, i) => (
-                <li key={i}><Link href={`/${lang}${link.href}`} className="hover:text-white transition-colors">{link.label}</Link></li>
-              ))}
-            </ul>
-          </div>
-          <div>
             <h4 className="font-semibold mb-4 text-lg">{columns.drivers.title}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               {columns.drivers.links.map((link, i) => (

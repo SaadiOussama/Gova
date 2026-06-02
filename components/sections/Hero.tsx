@@ -9,7 +9,7 @@ export default function Hero() {
   const dict = useDictionary();
   const h = dict.hero;
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#1A73E8]/10 to-white min-h-[90vh] flex items-center pt-20 pb-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#EAB84C]/10 to-white dark:from-[#EAB84C]/5 dark:to-gray-900 min-h-[90vh] flex items-center pt-20 pb-32">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
@@ -19,11 +19,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-[#111827] leading-tight mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-[#111827] dark:text-white leading-tight mb-6 tracking-tight">
               {h.titleLine1} <br />
               <span className="text-primary">{h.titleHighlight}</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0">
               {h.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
@@ -34,7 +34,7 @@ export default function Hero() {
                 <Image src="/X 1.png" alt={h.appStoreAlt} width={160} height={48} className="h-[50px] w-auto" />
               </a>
             </div>
-            <p className="mt-6 text-sm text-gray-500 font-medium">
+            <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 font-medium">
               {h.badge}
             </p>
           </motion.div>

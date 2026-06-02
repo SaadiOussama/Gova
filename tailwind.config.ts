@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#1A73E8",
+        primary: "#EAB84C",
         "primary-foreground": "#ffffff",
         muted: "hsl(210 40% 96.1%)",
         "muted-foreground": "hsl(220 8.9% 46.1%)",
         border: "hsl(214.3 31.8% 91.4%)",
         input: "hsl(214.3 31.8% 91.4%)",
-        ring: "#1A73E8",
+        ring: "#EAB84C",
         background: "#ffffff",
         foreground: "hsl(221 39% 11%)",
         gova: {
-          blue: "#1A73E8",
+          blue: "#EAB84C",
           amber: "#F59E0B",
           green: "#10B981",
           dark: "#111827",

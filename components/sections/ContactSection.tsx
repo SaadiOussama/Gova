@@ -44,11 +44,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight"
+            className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,7 +57,7 @@ export default function ContactSection() {
             {title}
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 mt-4"
+            className="text-xl text-gray-600 dark:text-gray-300 mt-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function ContactSection() {
         <div className="flex flex-col lg:flex-row gap-16 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div 
-            className="flex-1 bg-white border border-gray-100 rounded-3xl p-8 shadow-xl shadow-gray-200/50"
+            className="flex-1 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl p-8 shadow-xl shadow-gray-200/50 dark:shadow-gray-900/50"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -79,8 +79,8 @@ export default function ContactSection() {
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center h-full py-16 gap-4 text-center">
                 <CheckCircle2 className="w-16 h-16 text-green-500" />
-                <h3 className="text-2xl font-bold text-gray-900">{form.successTitle ?? "Message envoyé !"}</h3>
-                <p className="text-gray-600">{form.successMessage ?? "Nous vous répondrons dans les plus brefs délais."}</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{form.successTitle ?? "Message envoyé !"}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{form.successMessage ?? "Nous vous répondrons dans les plus brefs délais."}</p>
                 <Button onClick={() => setStatus("idle")} className="mt-4 rounded-xl bg-primary text-white">
                   {form.sendAnother ?? "Envoyer un autre message"}
                 </Button>
@@ -113,7 +113,7 @@ export default function ContactSection() {
                   <div className="space-y-2">
                     <Label htmlFor="phone">{form.phone}</Label>
                     <div className="flex">
-                      <div className="flex items-center justify-center bg-gray-50 border border-r-0 border-gray-200 px-3 rounded-s-xl text-gray-500 font-medium text-sm shrink-0">
+                      <div className="flex items-center justify-center bg-gray-50 dark:bg-gray-700 border border-r-0 border-gray-200 dark:border-gray-600 px-3 rounded-s-xl text-gray-500 dark:text-gray-400 font-medium text-sm shrink-0">
                         +213
                       </div>
                       <Input
@@ -130,7 +130,7 @@ export default function ContactSection() {
                   <Label htmlFor="subject">{form.subject}</Label>
                   <select
                     id="subject"
-                    className={`flex h-12 w-full rounded-xl border border-input bg-white px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-gray-700 ${errors.subject ? "border-red-400" : ""}`}
+                    className={`flex h-12 w-full rounded-xl border border-input dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-gray-700 dark:text-gray-200 ${errors.subject ? "border-red-400" : ""}`}
                     {...register("subject", { required: true, validate: (v) => v !== "" })}
                   >
                     <option value="">{form.subjectPlaceholder}</option>
@@ -175,8 +175,8 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">{info.title}</h3>
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">{info.title}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -184,8 +184,8 @@ export default function ContactSection() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{info.addressLabel}</h4>
-                    <p className="text-gray-600">{info.address}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{info.addressLabel}</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{info.address}</p>
                   </div>
                 </div>
                 
@@ -194,8 +194,8 @@ export default function ContactSection() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{info.phoneLabel}</h4>
-                    <p className="text-gray-600">{info.phoneValue}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{info.phoneLabel}</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{info.phoneValue}</p>
                   </div>
                 </div>
                 
@@ -204,8 +204,8 @@ export default function ContactSection() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{info.emailLabel}</h4>
-                    <p className="text-gray-600">{info.emailValue}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{info.emailLabel}</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{info.emailValue}</p>
                   </div>
                 </div>
 
@@ -214,25 +214,25 @@ export default function ContactSection() {
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{info.hoursLabel}</h4>
-                    <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: info.hoursValue }} />
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{info.hoursLabel}</h4>
+                    <p className="text-gray-600 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: info.hoursValue }} />
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10 pt-8 border-t border-gray-200">
-                <h4 className="font-semibold text-gray-900 mb-4">{info.followUs}</h4>
+              <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{info.followUs}</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
+                  <a href="#" className="w-10 h-10 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
                     <SiFacebook className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
+                  <a href="#" className="w-10 h-10 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
                     <SiInstagram className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
+                  <a href="#" className="w-10 h-10 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
                     <FaLinkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
+                  <a href="#" className="w-10 h-10 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:text-primary hover:border-primary rounded-full flex items-center justify-center transition-all">
                     <SiTiktok className="w-5 h-5" />
                   </a>
                 </div>

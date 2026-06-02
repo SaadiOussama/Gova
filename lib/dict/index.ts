@@ -55,6 +55,7 @@ export type Dictionary = {
     available: string;
     comingSoon: string;
     notifyLabel: string;
+    notifyButton: string;
     notifyPlaceholder: string;
     cities: string[];
   };

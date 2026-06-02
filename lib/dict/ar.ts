@@ -127,9 +127,10 @@ const ar: Dictionary = {
     title: "مدننا المخدومة",
     subtitle: "جوفا متوفر حالياً في أبرز مدن الجزائر.",
     available: "متوفر",
-    comingSoon: "قريباً",
-    notifyLabel: "أعلمني",
-    notifyPlaceholder: "بريدك الإلكتروني...",
+    comingSoon: "مدينتك قادمة قريباً",
+    notifyLabel: "كن أول من يعلم عند إطلاق GOVA في مدينتك",
+    notifyButton: "أعلمني",
+    notifyPlaceholder: "أدخل بريدك الإلكتروني...",
     cities: ["الجزائر", "وهران", "قسنطينة", "عنابة", "سطيف"],
   },
 

@@ -128,9 +128,10 @@ const fr: Dictionary = {
     subtitle:
       "GOVA est actuellement disponible dans les principales villes d'Algérie.",
     available: "Disponible",
-    comingSoon: "Bientôt",
-    notifyLabel: "Me notifier",
-    notifyPlaceholder: "Votre email...",
+    comingSoon: "Votre ville arrive bientôt",
+    notifyLabel: "Soyez le premier informé du lancement dans votre ville",
+    notifyButton: "Être notifié",
+    notifyPlaceholder: "Entrez votre email...",
     cities: ["Alger", "Oran", "Constantine", "Annaba", "Sétif"],
   },
 

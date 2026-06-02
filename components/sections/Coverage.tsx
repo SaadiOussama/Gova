@@ -62,13 +62,13 @@ const wilayas: { id: string; d: string }[] = [
 
 export default function Coverage() {
   const dict = useDictionary();
-  const { title, subtitle, available, comingSoon, notifyLabel, notifyPlaceholder, cities } = dict.coverage;
+  const { title, subtitle, available, comingSoon, notifyLabel, notifyButton, notifyPlaceholder, cities } = dict.coverage;
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4"
+            className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -77,7 +77,7 @@ export default function Coverage() {
             {title}
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -144,38 +144,38 @@ export default function Coverage() {
           {cities.map((city, index) => (
             <motion.div
               key={city}
-              className="bg-gray-50 border border-gray-100 rounded-full px-6 py-3 flex items-center gap-2 hover:border-orange-300 hover:bg-orange-50 transition-colors"
+              className="bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full px-6 py-3 flex items-center gap-2 hover:border-orange-300 hover:bg-orange-50 dark:hover:bg-gray-700 transition-colors"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <MapPin className="w-5 h-5 text-orange-500" />
-              <span className="font-semibold text-gray-900">{city}</span>
+              <span className="font-semibold text-gray-900 dark:text-white">{city}</span>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          className="max-w-xl mx-auto bg-gray-50 p-8 rounded-3xl border border-gray-100 text-center"
+          className="max-w-xl mx-auto bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{comingSoon}</h3>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{comingSoon}</h3>
           <p className="text-gray-500 mb-6">{notifyLabel}</p>
 
           <form className="flex flex-col sm:flex-row-reverse rtl:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
             <Button type="submit" className="h-12 px-8 rounded-xl bg-primary hover:bg-primary/90 text-white font-medium shrink-0">
-              {notifyLabel}
+              {notifyButton}
             </Button>
             <div className="relative flex-1">
               <Mail className="absolute inset-s-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <Input
                 type="email"
                 placeholder={notifyPlaceholder}
-                className="ps-10 h-12 bg-white rounded-xl border-gray-200 focus-visible:ring-primary"
+                className="ps-10 h-12 bg-white dark:bg-gray-900 rounded-xl border-gray-200 dark:border-gray-600 focus-visible:ring-primary"
                 required
               />
             </div>

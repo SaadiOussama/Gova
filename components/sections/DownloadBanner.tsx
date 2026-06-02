@@ -12,7 +12,7 @@ export default function DownloadBanner() {
   const dict = useDictionary();
   const { title, subtitle, googlePlayAlt, appStoreAlt } = dict.downloadBanner;
   return (
-    <section className="py-24 bg-[#1A73E8] relative overflow-hidden">
+    <section className="py-24 bg-[#EAB84C] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
@@ -61,7 +61,7 @@ export default function DownloadBanner() {
           >
             <div className="relative w-70 h-137.5 bg-white rounded-[2.5rem] shadow-2xl p-4 border-[6px] border-gray-900 rotate-12 hover:rotate-0 transition-transform duration-500">
               <div className="w-full h-full bg-gray-50 rounded-2xl overflow-hidden relative flex flex-col">
-                <div className="h-40 bg-[#1A73E8] p-4 flex flex-col justify-end">
+                <div className="h-40 bg-[#EAB84C] p-4 flex flex-col justify-end">
                   <div className="w-3/4 h-4 bg-white/20 rounded-full mb-3"></div>
                   <div className="w-1/2 h-6 bg-white rounded-full"></div>
                 </div>
