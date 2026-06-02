@@ -190,6 +190,7 @@ const fr: Dictionary = {
       successTitle: "Message envoyé !",
       successMessage: "Nous vous répondrons dans les plus brefs délais.",
       sendAnother: "Envoyer un autre message",
+      errorMessage: "Une erreur est survenue. Réessayez.",
       subjects: [
         "Support Passager",
         "Support Chauffeur",

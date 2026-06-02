@@ -90,6 +90,7 @@ export type Dictionary = {
       successTitle: string;
       successMessage: string;
       sendAnother: string;
+      errorMessage: string;
     };
     info: {
       title: string;
