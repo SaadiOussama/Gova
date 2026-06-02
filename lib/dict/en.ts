@@ -186,6 +186,9 @@ const en: Dictionary = {
       message: "Message",
       messagePlaceholder: "How can we help you?",
       send: "Send message",
+      successTitle: "Message sent!",
+      successMessage: "We will get back to you as soon as possible.",
+      sendAnother: "Send another message",
       subjects: [
         "Passenger support",
         "Driver support",

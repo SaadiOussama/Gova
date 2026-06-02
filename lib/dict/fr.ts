@@ -187,6 +187,9 @@ const fr: Dictionary = {
       message: "Message",
       messagePlaceholder: "Comment pouvons-nous vous aider ?",
       send: "Envoyer le message",
+      successTitle: "Message envoyé !",
+      successMessage: "Nous vous répondrons dans les plus brefs délais.",
+      sendAnother: "Envoyer un autre message",
       subjects: [
         "Support Passager",
         "Support Chauffeur",

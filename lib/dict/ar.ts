@@ -186,6 +186,9 @@ const ar: Dictionary = {
       message: "الرسالة",
       messagePlaceholder: "كيف يمكننا مساعدتك؟",
       send: "إرسال الرسالة",
+      successTitle: "تم إرسال الرسالة!",
+      successMessage: "سنرد عليك في أقرب وقت ممكن.",
+      sendAnother: "إرسال رسالة أخرى",
       subjects: [
         "دعم الركاب",
         "دعم السائقين",

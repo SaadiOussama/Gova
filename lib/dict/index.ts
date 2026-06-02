@@ -87,6 +87,9 @@ export type Dictionary = {
       messagePlaceholder: string;
       send: string;
       subjects: string[];
+      successTitle: string;
+      successMessage: string;
+      sendAnother: string;
     };
     info: {
       title: string;
