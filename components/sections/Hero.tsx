@@ -47,11 +47,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Image
-              src="/P1.png"
+              src="/P3.png"
               alt="GOVA App"
               width={420}
               height={560}
-              className="w-full max-w-[500px] h-auto drop-shadow-2xl"
+              className="w-full max-w-[600px] h-auto drop-shadow-2xl"
               priority
             />
           </motion.div>

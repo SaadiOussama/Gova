@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
-import { Clock, LineChart, Users } from "lucide-react";
 import { useDictionary } from "@/lib/DictContext";
 
-const icons = [Clock, LineChart, Users];
+const iconSrcs = ["/clock_.png", "/chart_.png", "/users_.png"];
+const iconAlts = ["Flexibilité", "Revenus", "Accompagnement"];
 
 export default function DriverCTA() {
   const dict = useDictionary();
@@ -43,7 +43,6 @@ export default function DriverCTA() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {benefits.map((benefit, index) => {
-              const Icon = icons[index];
               return (
                 <motion.div
                   key={index}
@@ -54,7 +53,8 @@ export default function DriverCTA() {
                   transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                 >
                   <div className="w-14 h-14 bg-[#EAB84C]/15 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-[#EAB84C]" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={iconSrcs[index]} alt={iconAlts[index]} width={36} height={36} className="w-9 h-9 object-contain" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
