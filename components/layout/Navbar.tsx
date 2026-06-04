@@ -91,7 +91,7 @@ export default function Navbar() {
             <Link href={`/${lang}/chauffeur`} onClick={() => setOpen(false)} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary px-3 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{nav.drivers}</Link>
             <Link href={`/${lang}/contact`} onClick={() => setOpen(false)} className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary px-3 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">{nav.contact}</Link>
             <div className="pt-1 pb-1 border-t border-gray-100 dark:border-gray-700 mt-1 flex items-center justify-between">
-              <LanguageSelector />
+              <LanguageSelector inMenu />
               {mounted && (
                 <button
                   onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}

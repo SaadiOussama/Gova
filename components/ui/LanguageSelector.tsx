@@ -11,7 +11,11 @@ const LANGUAGE_LABELS: Record<string, { short: string; label: string; flag: stri
   en: { short: "EN", label: "English", flag: "🇬🇧", dir: "ltr" },
 };
 
-export default function LanguageSelector() {
+interface LanguageSelectorProps {
+  inMenu?: boolean;
+}
+
+export default function LanguageSelector({ inMenu = false }: LanguageSelectorProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -38,6 +42,35 @@ export default function LanguageSelector() {
   }
 
   const current = LANGUAGE_LABELS[currentLang] ?? LANGUAGE_LABELS.fr;
+
+  // In mobile menu: show languages inline, no floating dropdown
+  if (inMenu) {
+    return (
+      <div role="listbox" aria-label="Choisir une langue" className="flex items-center gap-1">
+        {LOCALES.map((lang) => {
+          const info = LANGUAGE_LABELS[lang];
+          const isActive = currentLang === lang;
+          return (
+            <button
+              key={lang}
+              role="option"
+              aria-selected={isActive}
+              onClick={() => switchLocale(lang)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-[#F59E0B]/15 text-[#D97706] dark:text-[#F59E0B]"
+                  : "text-gray-600 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/5"
+              }`}
+            >
+              <span className="text-base leading-none">{info.flag}</span>
+              <span dir="ltr">{info.short}</span>
+              {isActive && <Check className="w-3 h-3" />}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <div ref={ref} className="relative">

@@ -112,14 +112,14 @@ export default function ContactSection() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">{form.phone}</Label>
-                    <div className="flex">
-                      <div className="flex items-center justify-center bg-gray-50 dark:bg-gray-700 border border-r-0 border-gray-200 dark:border-gray-600 px-3 rounded-s-xl text-gray-500 dark:text-gray-400 font-medium text-sm shrink-0">
+                    <div className="flex" dir="ltr">
+                      <div className="flex items-center justify-center bg-gray-50 dark:bg-gray-700 border border-r-0 border-gray-200 dark:border-gray-600 px-3 rounded-l-xl text-gray-500 dark:text-gray-400 font-medium text-sm shrink-0">
                         +213
                       </div>
                       <Input
                         id="phone"
                         placeholder={form.phonePlaceholder}
-                        className="h-12 rounded-s-none rounded-e-xl"
+                        className="h-12 rounded-l-none rounded-r-xl"
                         {...register("phone")}
                       />
                     </div>
