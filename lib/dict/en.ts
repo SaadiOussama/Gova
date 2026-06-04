@@ -64,11 +64,6 @@ const en: Dictionary = {
         description:
           "For your important journeys. Higher-end vehicle, enhanced comfort.",
       },
-      {
-        title: "Express",
-        description:
-          "When every minute matters. Priority match with the nearest driver.",
-      },
     ],
   },
 
@@ -132,6 +127,8 @@ const en: Dictionary = {
     notifyButton: "Notify me",
     notifyPlaceholder: "Enter your email...",
     cities: ["Algiers", "Oran", "Constantine", "Annaba", "Sétif"],
+    serviceLabel: "Service",
+    citiesLabel: "city",
   },
 
   faq: {
@@ -191,6 +188,12 @@ const en: Dictionary = {
       successMessage: "We will get back to you as soon as possible.",
       sendAnother: "Send another message",
       errorMessage: "An error occurred. Please try again.",
+      errors: {
+        name: "This field is required (min. 2 characters)",
+        email: "Invalid email address",
+        subject: "Please choose a subject",
+        message: "Message must be at least 10 characters",
+      },
       subjects: [
         "Passenger support",
         "Driver support",
@@ -259,7 +262,7 @@ const en: Dictionary = {
       titleHighlight: "GOVA driver",
       subtitle:
         "Turn your free time into income. Join the local VTC platform that respects its partner drivers.",
-      cta: "Start registration",
+      cta: "Download the app",
     },
     requirements: {
       title: "Required documents",

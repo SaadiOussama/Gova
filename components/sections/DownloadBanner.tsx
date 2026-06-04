@@ -52,32 +52,20 @@ export default function DownloadBanner() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="flex-1 flex justify-center md:justify-end"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative w-70 h-137.5 bg-white rounded-[2.5rem] shadow-2xl p-4 border-[6px] border-gray-900 rotate-12 hover:rotate-0 transition-transform duration-500">
-              <div className="w-full h-full bg-gray-50 rounded-2xl overflow-hidden relative flex flex-col">
-                <div className="h-40 bg-[#EAB84C] p-4 flex flex-col justify-end">
-                  <div className="w-3/4 h-4 bg-white/20 rounded-full mb-3"></div>
-                  <div className="w-1/2 h-6 bg-white rounded-full"></div>
-                </div>
-                <div className="flex-1 p-4 flex flex-col gap-3">
-                  <div className="w-full h-24 bg-white rounded-xl shadow-sm border border-gray-100 p-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full mb-2"></div>
-                    <div className="w-1/2 h-3 bg-gray-200 rounded-full"></div>
-                  </div>
-                  <div className="w-full h-24 bg-white rounded-xl shadow-sm border border-gray-100 p-3">
-                    <div className="w-10 h-10 bg-amber-100 rounded-full mb-2"></div>
-                    <div className="w-1/2 h-3 bg-gray-200 rounded-full"></div>
-                  </div>
-                  <div className="mt-auto w-full h-12 bg-[#F59E0B] rounded-xl"></div>
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/P2.png"
+              alt="GOVA App"
+              width={460}
+              height={600}
+              className="w-full max-w-sm md:max-w-md h-auto drop-shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-500 -mb-16"
+            />
           </motion.div>
         </div>
       </div>

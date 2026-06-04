@@ -44,7 +44,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-900">
+    <section className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
@@ -95,7 +95,7 @@ export default function ContactSection() {
                     className={`h-12 rounded-xl ${errors.name ? "border-red-400 focus-visible:ring-red-400" : ""}`}
                     {...register("name", { required: true, minLength: 2 })}
                   />
-                  {errors.name && <p className="text-xs text-red-500">Ce champ est requis (min. 2 caractères)</p>}
+                  {errors.name && <p className="text-xs text-red-500">{form.errors.name}</p>}
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -108,7 +108,7 @@ export default function ContactSection() {
                       className={`h-12 rounded-xl ${errors.email ? "border-red-400 focus-visible:ring-red-400" : ""}`}
                       {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
                     />
-                    {errors.email && <p className="text-xs text-red-500">Adresse email invalide</p>}
+                    {errors.email && <p className="text-xs text-red-500">{form.errors.email}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">{form.phone}</Label>
@@ -138,7 +138,7 @@ export default function ContactSection() {
                       <option key={i} value={s}>{s}</option>
                     ))}
                   </select>
-                  {errors.subject && <p className="text-xs text-red-500">Veuillez choisir un sujet</p>}
+                  {errors.subject && <p className="text-xs text-red-500">{form.errors.subject}</p>}
                 </div>
 
                 <div className="space-y-2">
@@ -149,7 +149,7 @@ export default function ContactSection() {
                     className={`min-h-[120px] rounded-xl resize-none ${errors.message ? "border-red-400 focus-visible:ring-red-400" : ""}`}
                     {...register("message", { required: true, minLength: 10 })}
                   />
-                  {errors.message && <p className="text-xs text-red-500">Le message doit contenir au moins 10 caractères</p>}
+                  {errors.message && <p className="text-xs text-red-500">{form.errors.message}</p>}
                 </div>
 
                 {status === "error" && (
@@ -195,7 +195,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">{info.phoneLabel}</h4>
-                    <p className="text-gray-600 dark:text-gray-300">{info.phoneValue}</p>
+                    <p className="text-gray-600 dark:text-gray-300" dir="ltr">{info.phoneValue}</p>
                   </div>
                 </div>
                 

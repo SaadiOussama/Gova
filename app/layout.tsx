@@ -30,7 +30,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={lang} dir={dir} className={inter.variable} suppressHydrationWarning>
       <body className="antialiased font-sans bg-white dark:bg-gray-900 text-gova-dark dark:text-gray-100" suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
         {GA_ID && (

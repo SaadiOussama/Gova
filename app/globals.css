@@ -38,6 +38,7 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
@@ -45,6 +46,7 @@
     color: #111827;
     background-color: #ffffff;
     line-height: 1.5;
+    overflow-x: hidden;
   }
 
   .dark body {

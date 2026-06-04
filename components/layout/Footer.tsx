@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SiFacebook, SiInstagram, SiTiktok } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
@@ -15,9 +16,11 @@ export default function Footer() {
   return (
     <footer className="bg-[#111827] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-primary mb-4">GOVA</h3>
+            <div className="mb-4">
+              <Image src="/logo.png" alt="GOVA" width={100} height={40} className="object-contain" />
+            </div>
             <p className="text-gray-400 mb-4 text-sm">{mission}</p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><SiFacebook className="w-5 h-5" /></a>
@@ -43,8 +46,16 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-          {copyright}
+        <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-500">
+          <span>{copyright}</span>
+          <a
+            href="https://sadeeminfo.com/a-propos-de-nous"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            Développé par Sadeem Informatique
+          </a>
         </div>
       </div>
     </footer>

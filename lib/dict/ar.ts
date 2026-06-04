@@ -64,11 +64,6 @@ const ar: Dictionary = {
         description:
           "لتنقلاتك المهمة. سيارة فاخرة، راحة أعلى.",
       },
-      {
-        title: "إكسبريس",
-        description:
-          "حين يهم الوقت. توصيل أولوي بأقرب سائق.",
-      },
     ],
   },
 
@@ -132,6 +127,8 @@ const ar: Dictionary = {
     notifyButton: "أعلمني",
     notifyPlaceholder: "أدخل بريدك الإلكتروني...",
     cities: ["الجزائر", "وهران", "قسنطينة", "عنابة", "سطيف"],
+    serviceLabel: "خدمة",
+    citiesLabel: "مدينة",
   },
 
   faq: {
@@ -191,6 +188,12 @@ const ar: Dictionary = {
       successMessage: "سنرد عليك في أقرب وقت ممكن.",
       sendAnother: "إرسال رسالة أخرى",
       errorMessage: "حدث خطأ. يرجى المحاولة مجدداً.",
+      errors: {
+        name: "هذا الحقل مطلوب (2 أحرف على الأقل)",
+        email: "عنوان البريد الإلكتروني غير صالح",
+        subject: "يرجى اختيار موضوع",
+        message: "يجب أن تحتوي الرسالة على 10 أحرف على الأقل",
+      },
       subjects: [
         "دعم الركاب",
         "دعم السائقين",
@@ -259,7 +262,7 @@ const ar: Dictionary = {
       titleHighlight: "GOVA",
       subtitle:
         "حوّل وقت فراغك إلى دخل. انضم إلى منصة النقل المحلية التي تحترم سائقيها الشركاء.",
-      cta: "ابدأ التسجيل",
+      cta: "تحميل التطبيق",
     },
     requirements: {
       title: "المستندات المطلوبة",

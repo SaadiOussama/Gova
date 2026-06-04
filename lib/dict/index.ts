@@ -58,6 +58,8 @@ export type Dictionary = {
     notifyButton: string;
     notifyPlaceholder: string;
     cities: string[];
+    serviceLabel: string;
+    citiesLabel: string;
   };
 
   faq: {
@@ -92,6 +94,12 @@ export type Dictionary = {
       successMessage: string;
       sendAnother: string;
       errorMessage: string;
+      errors: {
+        name: string;
+        email: string;
+        subject: string;
+        message: string;
+      };
     };
     info: {
       title: string;

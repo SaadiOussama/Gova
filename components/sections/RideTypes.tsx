@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useDictionary } from "@/lib/DictContext";
 
-const carImages = ["/Car_V1.png", "/Car_V2.png", "/Car_V3.png"];
+const carImages = ["/Car_V1.png", "/Car_V2.png"];
 
 export default function RideTypes() {
   const dict = useDictionary();
@@ -24,7 +24,7 @@ export default function RideTypes() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {rides.map((ride, index) => (
             <motion.div
               key={index}

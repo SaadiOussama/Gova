@@ -64,11 +64,6 @@ const fr: Dictionary = {
         description:
           "Pour vos déplacements importants. Véhicule de gamme supérieure, confort accru.",
       },
-      {
-        title: "Express",
-        description:
-          "Quand chaque minute compte. Mise en relation prioritaire.",
-      },
     ],
   },
 
@@ -133,6 +128,8 @@ const fr: Dictionary = {
     notifyButton: "Être notifié",
     notifyPlaceholder: "Entrez votre email...",
     cities: ["Alger", "Oran", "Constantine", "Annaba", "Sétif"],
+    serviceLabel: "Service",
+    citiesLabel: "ville",
   },
 
   faq: {
@@ -192,6 +189,12 @@ const fr: Dictionary = {
       successMessage: "Nous vous répondrons dans les plus brefs délais.",
       sendAnother: "Envoyer un autre message",
       errorMessage: "Une erreur est survenue. Réessayez.",
+      errors: {
+        name: "Ce champ est requis (min. 2 caractères)",
+        email: "Adresse email invalide",
+        subject: "Veuillez choisir un sujet",
+        message: "Le message doit contenir au moins 10 caractères",
+      },
       subjects: [
         "Support Passager",
         "Support Chauffeur",
@@ -260,7 +263,7 @@ const fr: Dictionary = {
       titleHighlight: "GOVA",
       subtitle:
         "Transformez votre temps libre en revenus. Rejoignez la plateforme VTC locale qui respecte ses chauffeurs partenaires.",
-      cta: "Commencer l'inscription",
+      cta: "Télécharger l'application",
     },
     requirements: {
       title: "Documents requis",

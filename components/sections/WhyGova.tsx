@@ -10,7 +10,7 @@ export default function WhyGova() {
   const dict = useDictionary();
   const { title, subtitle, features } = dict.whyGova;
   return (
-    <section className="py-24 bg-white dark:bg-gray-900">
+    <section className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <motion.div 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Mail, Users } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { useDictionary } from "@/lib/DictContext";
@@ -62,7 +62,7 @@ const wilayas: { id: string; d: string }[] = [
 
 export default function Coverage() {
   const dict = useDictionary();
-  const { title, subtitle, available, comingSoon, notifyLabel, notifyButton, notifyPlaceholder, cities } = dict.coverage;
+  const { title, subtitle, available, comingSoon, notifyLabel, notifyButton, notifyPlaceholder, cities, serviceLabel, citiesLabel } = dict.coverage;
   return (
     <section className="py-24 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -108,11 +108,11 @@ export default function Coverage() {
               <div className="flex gap-6 mt-8">
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex-1 text-center">
                   <div className="text-3xl font-black text-orange-400">{cities.length}</div>
-                  <div className="text-gray-400 text-sm mt-1">مدينة</div>
+                  <div className="text-gray-400 text-sm mt-1">{citiesLabel}</div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex-1 text-center">
                   <div className="text-3xl font-black text-white">24/7</div>
-                  <div className="text-gray-400 text-sm mt-1">Service</div>
+                  <div className="text-gray-400 text-sm mt-1">{serviceLabel}</div>
                 </div>
               </div>
             </div>
